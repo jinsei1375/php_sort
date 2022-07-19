@@ -114,7 +114,7 @@ try{
     $aryPreData[$key[23]]['年齢合計'] += $key[22];
     $aryPreData[$key[23]]['平均年齢'] = round($aryPreData[$key[23]]['年齢合計'] / $aryPreData[$key[23]]['カウント']);
   }
-  var_dump($aryPreData);
+  // var_dump($aryPreData);
 
   function sortByKey($key_name, $sort_order, $array) {
     foreach ($array as $key => $value) {
