@@ -3,29 +3,6 @@
 <head><title>PHP SORT</title></head>
 <body>
 
-<?php
-
-$dsn = 'mysql:host=mysql;dbname=sort;charset=utf8';
-$user = 'test';
-$password = 'test';
-
-try{
-    $db = new PDO($dsn, $user, $password);
-
-
-    // $stmt = $db->query('SELECT * FROM personal_info');
-    // $stmt->execute();
-    // while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-    //   echo htmlspecialchars($row['id']) . '<br>';
-    //   echo htmlspecialchars($row['sei']) . '<br>';
-    // }
-
-  }catch (PDOException $e){
-    print('Error:'.$e->getMessage());
-    die();
-}
-
-?>
 
 <?php
   // csvファイルを配列に格納
@@ -114,7 +91,7 @@ try{
     $aryPreData[$key[23]]['年齢合計'] += $key[22];
     $aryPreData[$key[23]]['平均年齢'] = round($aryPreData[$key[23]]['年齢合計'] / $aryPreData[$key[23]]['カウント']);
   }
-  var_dump($aryPreData);
+
 
   function sortByKey($key_name, $sort_order, $array) {
     foreach ($array as $key => $value) {
@@ -128,10 +105,10 @@ try{
 
 
   $sorted_array = sortByKey('平均年齢', SORT_DESC, $aryPreData);
-  // var_dump($sorted_array);
+
   foreach($sorted_array as $key=>$value) {
     echo '平均年齢が高い都道府県：' . $key . '　男女比は' . $value['男'] . ':' . $value['女'];
-    // print_r($value);
+
     $cnt++;
     if($cnt > 0) {
       break;
