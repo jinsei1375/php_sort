@@ -3,6 +3,33 @@
 <head><title>PHP SORT</title></head>
 <body>
 
+<<<<<<< HEAD
+=======
+<?php
+
+$dsn = 'mysql:host=mysql;dbname=sort;charset=utf8';
+$user = 'test';
+$password = 'test';
+
+try{
+    $db = new PDO($dsn, $user, $password);
+
+
+    // $stmt = $db->query('SELECT * FROM personal_info');
+    // $stmt->execute();
+    // while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    //   echo htmlspecialchars($row['id']) . '<br>';
+    //   echo htmlspecialchars($row['sei']) . '<br>';
+    // }
+
+  }catch (PDOException $e){
+    print('Error:'.$e->getMessage());
+    die();
+    
+}
+
+?>
+>>>>>>> 75df7a2f6b2f6d7e8d969cdc3e37e67af4a413c4
 
 <?php
   // csvファイルを配列に格納
@@ -91,7 +118,11 @@
     $aryPreData[$key[23]]['年齢合計'] += $key[22];
     $aryPreData[$key[23]]['平均年齢'] = round($aryPreData[$key[23]]['年齢合計'] / $aryPreData[$key[23]]['カウント']);
   }
+<<<<<<< HEAD
 
+=======
+  // var_dump($aryPreData);
+>>>>>>> 75df7a2f6b2f6d7e8d969cdc3e37e67af4a413c4
 
   function sortByKey($key_name, $sort_order, $array) {
     foreach ($array as $key => $value) {
