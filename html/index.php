@@ -3,8 +3,6 @@
 <head><title>PHP SORT</title></head>
 <body>
 
-<<<<<<< HEAD
-=======
 <?php
 
 $dsn = 'mysql:host=mysql;dbname=sort;charset=utf8';
@@ -29,7 +27,6 @@ try{
 }
 
 ?>
->>>>>>> 75df7a2f6b2f6d7e8d969cdc3e37e67af4a413c4
 
 <?php
   // csvファイルを配列に格納
@@ -118,11 +115,8 @@ try{
     $aryPreData[$key[23]]['年齢合計'] += $key[22];
     $aryPreData[$key[23]]['平均年齢'] = round($aryPreData[$key[23]]['年齢合計'] / $aryPreData[$key[23]]['カウント']);
   }
-<<<<<<< HEAD
 
-=======
   // var_dump($aryPreData);
->>>>>>> 75df7a2f6b2f6d7e8d969cdc3e37e67af4a413c4
 
   function sortByKey($key_name, $sort_order, $array) {
     foreach ($array as $key => $value) {
